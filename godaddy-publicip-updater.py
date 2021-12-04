@@ -130,6 +130,8 @@ def loop_forever():
                     public_ip_cache = new_ip
             except:
                 logging.exception('Got exception updating godaddy records')
+        else:
+            logging.info('Public IP not changed')
 
         time.sleep(update_interval_sec)
 
